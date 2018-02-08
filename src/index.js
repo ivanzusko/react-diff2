@@ -37,7 +37,7 @@ const Diff = props => {
   const diff = fnMap[props.type](props.inputA, props.inputB);
   const result = diff.map(function(part, index) {
     const spanStyle = {
-      backgroundColor: part.added ? 'lightgreen' : part.removed ? 'salmon' : 'lightgrey'
+      backgroundColor: setLineColor(part.added, part.removed),
     };
 
     return <span className="diff-result__line" key={index} style={spanStyle}>{part.value}</span>;
@@ -54,3 +54,11 @@ const Diff = props => {
 Diff.propTypes = propTypes;
 
 export default Diff;
+
+function setLineColor(added, removed) {
+  if (added || removed) {
+    return added ? 'lightgreen' : 'salmon';
+  }
+
+  return;
+}

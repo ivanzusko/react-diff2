@@ -43,7 +43,7 @@
     var diff = fnMap[props.type](props.inputA, props.inputB);
     var result = diff.map(function (part, index) {
       var spanStyle = {
-        backgroundColor: part.added ? 'lightgreen' : part.removed ? 'salmon' : 'lightgrey'
+        backgroundColor: setLineColor(part.added, part.removed)
       };
 
       return _react2.default.createElement(
@@ -64,4 +64,13 @@
   Diff.propTypes = propTypes;
 
   exports.default = Diff;
+
+
+  function setLineColor(added, removed) {
+    if (added || removed) {
+      return added ? 'lightgreen' : 'salmon';
+    }
+
+    return;
+  }
 });
