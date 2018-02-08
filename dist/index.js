@@ -48,7 +48,7 @@
 
       return _react2.default.createElement(
         'span',
-        { key: index, style: spanStyle },
+        { className: 'diff-result__line', key: index, style: spanStyle },
         part.value
       );
     });

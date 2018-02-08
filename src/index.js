@@ -40,7 +40,7 @@ const Diff = props => {
       backgroundColor: part.added ? 'lightgreen' : part.removed ? 'salmon' : 'lightgrey'
     };
 
-    return <span key={index} style={spanStyle}>{part.value}</span>;
+    return <span className="diff-result__line" key={index} style={spanStyle}>{part.value}</span>;
   });
   const className = props.className ? `diff-result ${props.className}` : 'diff-result';
 
