@@ -1,6 +1,6 @@
 {
   "name": "react-diff2",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Highlights differences between to pieces of data.",
   "repository": {
     "type": "git",
