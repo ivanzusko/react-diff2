@@ -20,14 +20,14 @@ import React from 'react';
 import Diff from 'react-diff2';
 
 const Component = props => {
-	...
-	return (
-		<Diff
-			inputA="gogol"
-			inputB="google"
-			type="chars"
-		/>
-	);
+  ...
+  return (
+    <Diff
+      inputA="gogol"
+      inputB="google"
+      type="chars"
+    />
+  );
 }
 ```
 
@@ -38,14 +38,14 @@ import React from 'react';
 import Diff from 'react-diff2';
 
 const Component = props => {
-	...
-	return (
-		<Diff 
-			inputA={props.oldObject} 
-			inputB={props.newObject} 
-			type="json"
-		/>
-	);
+  ...
+  return (
+    <Diff 
+      inputA={props.oldObject} 
+      inputB={props.newObject} 
+      type="json"
+    />
+  );
 }
 ```
 
